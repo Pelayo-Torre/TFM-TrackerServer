@@ -1,0 +1,33 @@
+<?php
+    session_start();
+?>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		       
+
+		
+		
+
+	</head>
+	<body>		
+		<!-- <h1><fmt:message key="fitts.headerWelcome" /></h1> -->
+
+        <p><canvas id="canvas" width="800" height="600" style="background: orange;border-radius:40px;border: 5px solid red;" >
+            Canvas not supported by your browser.
+        </canvas></p>
+
+	</body>
+	<script src="./../js/scriptTest.js"></script>        
+	
+	<script src="./../js/fittsTest.js"></script> 
+	
+	<script>
+            var session_id = '<?php echo ( session_id() );?>';
+			//window.onload=initTracking(5555);
+			window.onload=initFittsTracking();
+			//window.onload=resizeCanvas();
+
+		</script>
+</html>

@@ -1,0 +1,20 @@
+﻿<?php
+    session_start();
+?>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="./../js/util.js"></script>
+		<script src="./../js/scriptTest.js"></script>
+		<script>
+            var session_id = '<?php echo ( session_id() );?>';
+			window.onload=initTracking(100);
+		</script>
+	</head>
+	<body>
+		<div class="supercentered">
+			<input type="button" value="X" onclick='finishTracking(); window.location.href = "page2FittsLaw.html";'>
+		</div>
+	</body>
+</html>

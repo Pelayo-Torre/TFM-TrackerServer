@@ -1,0 +1,125 @@
+<?php
+    session_start();
+?>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="./../js/scriptTest.js"></script>        
+
+		<script>
+            var session_id = '<?php echo ( session_id() );?>';
+			window.onload=loadAll();
+			
+			function loadAll(){
+				initTracking(101);
+				setTimeout(loadData, 100);
+			}
+			
+			function loadData(){
+				registerEdad(new Date());
+				registerGenero("Masculino");
+				
+				registerComponent(101, "inputTeclado", 0, 0, 0, 0, 1, null);
+				registerComponent(101, "inputTeclado2", 0, 0, 0, 0, 1, null);
+				
+				registerComponent(101, "cars", 0, 0, 0, 0, 2, null);
+				registerComponent(101, "volvo", 0, 0, 0, 0, 3, "cars");
+				registerComponent(101, "saab", 0, 0, 0, 0, 3, "cars");
+				registerComponent(101, "fiat", 0, 0, 0, 0, 3, "cars");
+				registerComponent(101, "audi", 0, 0, 0, 0, 3, "cars");
+				
+				registerComponent(101, "computers", 0, 0, 0, 0, 2, null);
+				registerComponent(101, "hp", 0, 0, 0, 0, 3, "computers");
+				registerComponent(101, "pavilion", 0, 0, 0, 0, 3, "computers");
+				registerComponent(101, "msi", 0, 0, 0, 0, 3, "computers");
+				registerComponent(101, "asus", 0, 0, 0, 0, 3, "computers");
+				registerComponent(101, "acer", 0, 0, 0, 0, 3, "computers");
+				registerComponent(101, "dell", 0, 0, 0, 0, 3, "computers");
+				registerComponent(101, "wiko", 0, 0, 0, 0, 3, "computers");
+				registerComponent(101, "sony", 0, 0, 0, 0, 3, "computers");
+				
+				registerComponent(101, "gender", 0, 0, 0, 0, 4, null);
+				registerComponent(101, "male", 0, 0, 0, 0, 3, "gender");
+				registerComponent(101, "female", 0, 0, 0, 0, 3, "gender");
+				registerComponent(101, "other", 0, 0, 0, 0, 3, "gender");
+				
+				registerComponent(101, "auto", 0, 0, 0, 0, 5, null);
+				registerComponent(101, "vehicle1", 0, 0, 0, 0, 3, "auto");
+				registerComponent(101, "vehicle2", 0, 0, 0, 0, 3, "auto");
+				registerComponent(101, "vehicle3", 0, 0, 0, 0, 3, "auto");
+			}
+			
+		</script>
+		
+		<script>
+		$(document).ready(function(){
+			setTimeout(function () {
+				$("#cookieConsent").fadeIn(200);
+			}, 40);
+			$("#closeCookieConsent, .cookieConsentOK").click(function() {
+				$("#cookieConsent").fadeOut(200);
+			});
+		}); 
+		</script>
+		
+	</head>
+	<body>
+		<p>EVENTO TECLADO</p><input type="text" id="inputTeclado"/>
+		<p>EVENTO TECLADO 2</p> <input type="text" id="inputTeclado2"/>
+		<br>
+		<br>
+		<p>EVENTOS COMBOBOX</p>
+		<label for="cars">Choose a car:</label>
+		  <select id="cars" name="cars">
+		    <option value="volvo" id="volvo">Volvo</option>
+		    <option value="saab" id="saab">Saab</option>
+		    <option value="fiat" id="fiat">Fiat</option>
+		    <option value="audi" id="audi">Audi</option>
+		  </select>
+		<br>
+		<br>	
+		<br>
+		<p>EVENTOS COMBOBOX Teclado</p>
+		<label for="computers">Choose a computer:</label>
+		  <select id="computers" name="computers">
+		    <option value="hp" id="hp">HP</option>
+		    <option value="pavilion" id="pavilion">Pavilion</option>
+		    <option value="msi" id="msi">MSI</option>
+		    <option value="asus" id="asus">Asus</option>
+		    <option value="acer" id="acer">Acer</option>
+		    <option value="dell" id="dell">Dell</option>
+		    <option value="wiko" id="wiko">Wiko</option>
+		    <option value="sony" id="sony">Sony</option>
+		  </select>
+		<br>
+		<br>
+		<p>Please select your gender:</p>
+		  <input type="radio" id="male" name="gender" value="male">
+		  <label for="male">Male</label><br>
+		  <input type="radio" id="female" name="gender" value="female">
+		  <label for="female">Female</label><br>
+		  <input type="radio" id="other" name="gender" value="other">
+		  <label for="other">Other</label>
+		<br>	
+		<br>
+		<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+		  <label for="vehicle1"> I have a bike</label><br>
+		  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+		  <label for="vehicle2"> I have a car</label><br>
+		  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+		  <label for="vehicle3"> I have a boat</label>
+  		<br><br>
+		<div id="cookieConsent">
+			<div id="closeCookieConsent">x</div>
+			<span id="cookieText">
+			Centros Comerciales Carrefour, S.A. utiliza cookies propias y de terceros para proporcionarte una mejor experiencia de compra, 
+			elaborar información estadística y ofrecerte publicidad de interés por nosotros y por terceros. Si continúas navegando, 
+			consideramos que aceptas su uso. 
+			Puedes cambiar la configuración, y/o rechazar, así como obtener más información sobre las cookies en
+			<a href="#" target="_blank">saber más</a>.
+			</span>	
+			<a class="cookieConsentOK" onclick='finishTracking();window.location.href = "transition1-2.html";'>Aceptar y continuar</a>
+		</div>
+	</body>
+</html>
