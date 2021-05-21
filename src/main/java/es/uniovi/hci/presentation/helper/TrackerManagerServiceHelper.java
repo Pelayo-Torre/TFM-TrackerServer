@@ -5,7 +5,7 @@ import es.uniovi.hci.factories.ServiceFactory;
 import es.uniovi.hci.model.EventsTransferObject;
 
 public class TrackerManagerServiceHelper {
-
+	
 	public void saveChunk(EventsTransferObject dto) throws TrackerException{
 		ServiceFactory.getTrackerManagerService().saveChunk(dto);
 	}

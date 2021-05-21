@@ -38,9 +38,7 @@ public class UserController {
 			
 			if(transfer != null) {
 				UserManagerServiceHelper helper = new UserManagerServiceHelper();
-				helper.checkTrackingUser(fillUserData(request, transfer.getIdExperiment()));
-				
-				transfer.setSessionId(request.getSession().getId());
+				helper.checkTrackingUser(fillUserData(request, transfer));
 				helper.registerNavigationData(transfer);
 			}
 			else {
@@ -57,47 +55,16 @@ public class UserController {
 		return "ok";
 	}
 	
-	private UserData fillUserData(HttpServletRequest request, Long idExperiment) {
+	private UserData fillUserData(HttpServletRequest request, UserData transfer) {
 		return new UserData(
-				request.getSession().getId(),
-				idExperiment,
+				transfer.getSessionId(),
+				transfer.getIdExperiment(),
 				(new Date()).getTime(),
 				request.getLocale().toString(),
 				request.getRemoteAddr(),
 				request.getRemoteHost(),
 				request.getRemotePort(),
-				(Integer) request.getSession().getAttribute("timezone")
+				transfer.getTimezone()
 		);
 	}
-
-//	final static Logger logger = Logger.getLogger(UserDataRegistry.class);
-//
-//	@Context
-//	private HttpServletRequest request;
-//
-//	private UserRegister userRegister = null;
-//
-//	@POST
-//	@Produces(MediaType.TEXT_PLAIN)
-//	public String saveEvents(String parametros) {
-//		logger.debug("parametros user data: " + parametros);
-//
-//		UserData transfer = null;
-//		try {
-//			Gson gson = new Gson();
-//			transfer = gson.fromJson(parametros, UserData.class);
-//			
-//			userRegister = new UserRegister();
-//			userRegister.checkTracking(request);
-//			
-//			UserDataRegister userDataRegister = new UserDataRegister();
-//			userDataRegister.completeUserData(request, transfer);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		logger.debug("recording user data: " + transfer);
-//
-//		return "ok";
-//	}
-
 }

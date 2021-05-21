@@ -7,6 +7,7 @@ import es.uniovi.hci.business.validators.DemographicDataValidator;
 import es.uniovi.hci.model.DemographicData;
 import es.uniovi.hci.model.DemographicDataType;
 import es.uniovi.hci.persistence.helper.DemographicDataServiceHelper;
+import es.uniovi.hci.persistence.helper.UserDataServiceHelper;
 
 public class DemographicDataManagerServiceImpl implements DemographicDataManagerService{
 	
@@ -21,6 +22,13 @@ public class DemographicDataManagerServiceImpl implements DemographicDataManager
 		logger.debug("\tParámetros de entrada: " + dd);
 		
 		DemographicDataServiceHelper helper = new DemographicDataServiceHelper();
+		UserDataServiceHelper userHelper = new UserDataServiceHelper();
+		
+		//Se obtiene el usuario para comprobar su existencia
+		if(!userHelper.userExist(dd.getSessionId())) {
+			logger.error("\t[ERROR] El usuario: " + dd.getSessionId() + " no se encuentra registrado en el sistema");
+			throw new DemographicDataException("El usuario " + dd.getSessionId() + " no se encuentra registrado en el sistema");
+		}
 		
 		//Se obtiene el dato demográfico registrado en bbdd
 		DemographicData dd2 = helper.getDemographicDataByIdAndIdExperiment(dd.getId(), dd.getIdExperiment());
@@ -32,12 +40,24 @@ public class DemographicDataManagerServiceImpl implements DemographicDataManager
 		}
 		else {
 			if(dd2.getType().equals(DemographicDataType.STRING.name()) && dd.getStringValue() != null) {
+				if(helper.existDemographicDataString(dd.getId(), dd.getSessionId())) {
+					logger.error("\t[ERROR] El dato demográfico STRING con ID " + dd.getId() + " y USUARIO " + dd.getSessionId() + " ya está registrado");
+					throw new DemographicDataException("El dato demográfico STRING con ID " + dd.getId() + " y USUARIO " + dd.getSessionId() + " ya está registrado");
+				}
 				helper.registerString(dd);
 			}
 			else if(dd2.getType().equals(DemographicDataType.DATE.name()) && dd.getDateValue() != null) {
+				if(helper.existDemographicDataDate(dd.getId(), dd.getSessionId())) {
+					logger.error("\t[ERROR] El dato demográfico DATE con ID " + dd.getId() + " y USUARIO " + dd.getSessionId() + " ya está registrado");
+					throw new DemographicDataException("El dato demográfico DATE con ID " + dd.getId() + " y USUARIO " + dd.getSessionId() + " ya está registrado");
+				}
 				helper.registerDate(dd);
 			}
 			else if(dd2.getType().equals(DemographicDataType.NUMBER.name()) && dd.getNumberValue() != null){
+				if(helper.existDemographicDataNumber(dd.getId(), dd.getSessionId())) {
+					logger.error("\t[ERROR] El dato demográfico NUMBER con ID " + dd.getId() + " y USUARIO " + dd.getSessionId() + " ya está registrado");
+					throw new DemographicDataException("El dato demográfico NUMBER con ID " + dd.getId() + " y USUARIO " + dd.getSessionId() + " ya está registrado");
+				}
 				helper.registerNumber(dd);
 			}
 			else {

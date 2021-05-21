@@ -25,6 +25,8 @@
 		const COMPONENT_OPTION = 3;
 		const COMPONENT_RADIO_BUTTON = 4;
 		const COMPONENT_CHECK_BOX = 5;
+		
+		const user = createUser();
 	
 			
 		var list = [];
@@ -39,7 +41,7 @@
 		var emittingData = false;
 		
 	var idExperiment = 1;
-	var urlBase='http://156.35.95.104:8080'
+	var urlBase='http://localhost:8080'
 		
 		var url = urlBase + '/TrackerServer/restws/track';
 		var urlRegisterComponent = urlBase + '/TrackerServer/restws/registerComponent';
@@ -47,6 +49,21 @@
 		var urlDemographicData = urlBase + '/TrackerServer/restws/registerDemographicData';
 		var urlExperimentStatus = urlBase + '/TrackerServer/restws/experiment/status/' + idExperiment;
 	
+	
+	
+		function createUser(){
+			if(localStorage.getItem("user") === null || localStorage.getItem("user") === undefined){
+				let lettrs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+				localStorage.setItem("user", 
+						lettrs[Math.floor(Math.random() * lettrs.length)] + 
+						lettrs[Math.floor(Math.random() * lettrs.length)] +
+						lettrs[Math.floor(Math.random() * lettrs.length)] +
+						(Math.floor(Math.random() * (999999999999 - 100000000000)) + 100000000000).toString() +
+						Date.now().toString()
+				);
+			}
+			return localStorage.getItem("user");
+		}
 	
 		function registerUserData()
 		{
@@ -76,7 +93,8 @@
 			    "sizeAvailH": screen.availHeight,
 			    "scrColorDepth": screen.colorDepth,
 			    "scrPixelDepth": screen.pixelDepth,
-			    "idExperiment" : idExperiment
+			    "idExperiment" : idExperiment,
+			    "sessionId" : user
 			};		
 			if(emittingData){
 				$.ajax({
@@ -119,7 +137,7 @@
 		function detectElement(x,y){
 			var found = -1 ;
 			elements.forEach ( function(entry){
-				if (entry.isOver(x,y) && entry.getScene() === sceneId){
+				if (entry.isOver(x,y) < entry.getScene() === sceneId) {
 					found = entry.id;
 				}
 			});
@@ -129,7 +147,7 @@
 		function detectElementByName(name){
 			var found = -1;
 			elements.forEach ( function(entry){
-				if(entry.id === name && entry.getScene() === sceneId){
+				if(entry.id === name < entry.getScene() === sceneId){
 					found = entry.id;
 				}
 			});
@@ -182,7 +200,6 @@
 		
 		function trackEventOverElement(eventType, elementId, event)
 		{
-			console.log(document.cookie.match('sid=([^;]*)')[1]);
 			var item = new Object();
 			item.id=eventCounter++;
 			item.sceneId=sceneId;
@@ -387,7 +404,8 @@
 				"timeStamp": Date.now(),
 				"idExperiment" : idExperiment,
 				"typeId" : typeId,
-				"componentAssociated": componentAssociated
+				"componentAssociated": componentAssociated,
+			    "sessionId" : user
 			};
 			
 			if(emittingData){
@@ -410,7 +428,8 @@
 		    var parametros = {
 		    	"timezone": (new Date()).getTimezoneOffset()/60 * (-1),
 				"list" : chunk,
-				"idExperiment" : idExperiment
+				"idExperiment" : idExperiment,
+			    "sessionId" : user
 			};
 			
 			if(emittingData){
@@ -558,18 +577,19 @@
 				"timezone": (new Date()).getTimezoneOffset()/60 * (-1),
 		    	"id": id,
 				"numberValue": value,
-				"idExperiment" : idExperiment
+				"idExperiment" : idExperiment,
+			    "sessionId" : user
 			};
 			postAJAXDemographicData(parametros);
 		}
 		
 		function postStringDD(id, value) {
-			console.log("ejecutando string")
 			var parametros = {
 				"timezone": (new Date()).getTimezoneOffset()/60 * (-1),
 		    	"id": id,
 				"stringValue": value,
-				"idExperiment" : idExperiment
+				"idExperiment" : idExperiment,
+			    "sessionId" : user
 			};
 			postAJAXDemographicData(parametros);
 		}
@@ -579,7 +599,8 @@
 				"timezone": (new Date()).getTimezoneOffset()/60 * (-1),
 		    	"id": id,
 				"dateValue": value,
-				"idExperiment" : idExperiment
+				"idExperiment" : idExperiment,
+			    "sessionId" : user
 			};
 			postAJAXDemographicData(parametros);
 		}
@@ -598,10 +619,5 @@
 			}
 		}
 	
-		function registerEdad(value) {
-			postDateDD(6, value);
-		}
 
-		function registerGenero(value) {
-			postStringDD(7, value);
-		}
+function registerEdad(value) {postDateDD(3, value);}function registerGenero(value) {postStringDD(4, value);}

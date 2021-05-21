@@ -12,4 +12,10 @@ public interface DemographicDataService {
 
 	public DemographicData getDemographicDataByIdAndIdExperiment(Long id, Long idExperiment);
 
+	public boolean existDemographicDataString(Long id, String sessionId);
+	
+	public boolean existDemographicDataDate(Long id, String sessionId);
+	
+	public boolean existDemographicDataNumber(Long id, String sessionId);
+
 }

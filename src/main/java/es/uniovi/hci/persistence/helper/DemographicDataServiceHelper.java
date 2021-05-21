@@ -20,5 +20,17 @@ public class DemographicDataServiceHelper {
 	public DemographicData getDemographicDataByIdAndIdExperiment(Long id, Long idExperiment) {
 		return DataServiceFactory.getDemographicDataService().getDemographicDataByIdAndIdExperiment(id, idExperiment);
 	}
+
+	public boolean existDemographicDataString(Long id, String sessionId) {
+		return DataServiceFactory.getDemographicDataService().existDemographicDataString(id, sessionId);
+	} 
+	
+	public boolean existDemographicDataDate(Long id, String sessionId) {
+		return DataServiceFactory.getDemographicDataService().existDemographicDataDate(id, sessionId);
+	} 
+	
+	public boolean existDemographicDataNumber(Long id, String sessionId) {
+		return DataServiceFactory.getDemographicDataService().existDemographicDataNumber(id, sessionId);
+	} 
 	
 }

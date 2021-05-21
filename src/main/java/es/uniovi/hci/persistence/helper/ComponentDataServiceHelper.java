@@ -9,4 +9,8 @@ public class ComponentDataServiceHelper {
 		DataServiceFactory.getComponentDataService().registry(componentData);
 	}
 
+	public boolean existComponent(String sceneId, String componentId, String sessionId) {
+		return DataServiceFactory.getComponentDataService().existComponent(sceneId, componentId, sessionId);
+	}
+
 }

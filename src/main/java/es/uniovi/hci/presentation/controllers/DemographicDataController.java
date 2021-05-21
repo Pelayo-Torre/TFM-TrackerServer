@@ -1,5 +1,7 @@
 package es.uniovi.hci.presentation.controllers;
 
+import java.util.Date;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -13,7 +15,9 @@ import com.google.gson.Gson;
 
 import es.uniovi.hci.business.exception.DemographicDataException;
 import es.uniovi.hci.model.DemographicData;
+import es.uniovi.hci.model.UserData;
 import es.uniovi.hci.presentation.helper.DemographicDataManagerServiceHelper;
+import es.uniovi.hci.presentation.helper.UserManagerServiceHelper;
 
 @Path("registerDemographicData")
 public class DemographicDataController {
@@ -35,12 +39,8 @@ public class DemographicDataController {
 			transfer = gson.fromJson(parametros, DemographicData.class);
 			
 			if(transfer != null) {
-				
-				request.getSession().setAttribute("timezone", transfer.getTimezone());
-				transfer.setSessionId(request.getSession().getId());
-				
+				new UserManagerServiceHelper().checkTrackingUser(fillUserData(request, transfer));
 				new DemographicDataManagerServiceHelper().register(transfer);
-				
 			}
 			else {
 				logger.error("[ERROR] - ComponentController - registry-  Objeto no convertido a partir de los datos de entrada.");
@@ -55,6 +55,19 @@ public class DemographicDataController {
 		logger.debug("[FINAL] - DemographicDataController - registry");
 		
 		return "ok";
+	}
+	
+	private UserData fillUserData(HttpServletRequest request, DemographicData transfer) {
+		return new UserData(
+				transfer.getSessionId(),
+				transfer.getIdExperiment(),
+				(new Date()).getTime(),
+				request.getLocale().toString(),
+				request.getRemoteAddr(),
+				request.getRemoteHost(),
+				request.getRemotePort(),
+				transfer.getTimezone()
+		);
 	}
 	
 }

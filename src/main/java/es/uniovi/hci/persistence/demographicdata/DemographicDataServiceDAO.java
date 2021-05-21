@@ -143,4 +143,106 @@ public class DemographicDataServiceDAO implements DemographicDataService{
 		return data;
 	}
 
+	public boolean existDemographicDataString(Long id, String sessionId) {
+		logger.debug("[INICIO] - DemographicDataServiceDAO - existDemographicDataString");
+		
+		Connection con;
+		boolean exist = false;
+		try {
+			con = ConnectionProvider.getInstance().getConnection();
+			
+			PreparedStatement stmt = con.prepareStatement(Conf.get("SQL_FIND_DEMOGRAPHIC_DATA_STRING_BY_ID_AND_SESSION"));
+
+			stmt.setLong(1, id);
+			stmt.setString(2, sessionId);
+							
+			logger.debug("\tQuery: " + stmt);
+			ResultSet result = stmt.executeQuery();
+
+			while (result.next()) {
+				exist = true;
+			}
+			
+			con.close();
+			
+		} catch (ClassNotFoundException e) {
+			logger.error("[ERROR] - ClassNotFoundException " + e.toString());
+		} catch (SQLException e) {
+			logger.error("[ERROR] - SQLException " + e.toString());
+		} catch (IOException e) {
+			logger.error("[ERROR] - IOException " + e.toString());
+		}
+		
+		logger.debug("[FINAL] - DemographicDataServiceDAO - existDemographicDataString");
+		return exist;
+	}
+	
+	public boolean existDemographicDataNumber(Long id, String sessionId) {
+		logger.debug("[INICIO] - DemographicDataServiceDAO - existDemographicDataNumber");
+		
+		Connection con;
+		boolean exist = false;
+		try {
+			con = ConnectionProvider.getInstance().getConnection();
+			
+			PreparedStatement stmt = con.prepareStatement(Conf.get("SQL_FIND_DEMOGRAPHIC_DATA_NUMBER_BY_ID_AND_SESSION"));
+
+			stmt.setLong(1, id);
+			stmt.setString(2, sessionId);
+							
+			logger.debug("\tQuery: " + stmt);
+			ResultSet result = stmt.executeQuery();
+
+			while (result.next()) {
+				exist = true;
+			}
+			
+			con.close();
+			
+		} catch (ClassNotFoundException e) {
+			logger.error("[ERROR] - ClassNotFoundException " + e.toString());
+		} catch (SQLException e) {
+			logger.error("[ERROR] - SQLException " + e.toString());
+		} catch (IOException e) {
+			logger.error("[ERROR] - IOException " + e.toString());
+		}
+		
+		logger.debug("[FINAL] - DemographicDataServiceDAO - existDemographicDataNumber");
+		return exist;
+	}
+	
+	public boolean existDemographicDataDate(Long id, String sessionId) {
+		logger.debug("[INICIO] - DemographicDataServiceDAO - existDemographicDataDate");
+		
+		Connection con;
+		boolean exist = false;
+		try {
+			con = ConnectionProvider.getInstance().getConnection();
+			
+			PreparedStatement stmt = con.prepareStatement(Conf.get("SQL_FIND_DEMOGRAPHIC_DATA_DATE_BY_ID_AND_SESSION"));
+
+			stmt.setLong(1, id);
+			stmt.setString(2, sessionId);
+							
+			logger.debug("\tQuery: " + stmt);
+			ResultSet result = stmt.executeQuery();
+
+			while (result.next()) {
+				exist = true;
+			}
+			
+			con.close();
+			
+		} catch (ClassNotFoundException e) {
+			logger.error("[ERROR] - ClassNotFoundException " + e.toString());
+		} catch (SQLException e) {
+			logger.error("[ERROR] - SQLException " + e.toString());
+		} catch (IOException e) {
+			logger.error("[ERROR] - IOException " + e.toString());
+		}
+		
+		logger.debug("[FINAL] - DemographicDataServiceDAO - existDemographicDataDate");
+		return exist;
+	}
+
 }

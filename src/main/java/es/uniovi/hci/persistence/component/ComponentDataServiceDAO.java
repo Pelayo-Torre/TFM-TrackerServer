@@ -3,6 +3,7 @@ package es.uniovi.hci.persistence.component;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
@@ -53,6 +54,42 @@ public class ComponentDataServiceDAO implements ComponentDataService{
 			logger.error("[ERROR] - IOException " + e.toString());
 		}
 		logger.debug("[FINAL] - ComponentDataServiceDAO - registry");
+	}
+
+	public boolean existComponent(String sceneId, String componentId, String sessionId) {
+		logger.debug("[INICIO] - ComponentDataServiceDAO - existComponent");
+		
+		Connection con;
+		boolean exist = false;
+		try {
+			con = ConnectionProvider.getInstance().getConnection();
+			
+			PreparedStatement stmt = con.prepareStatement(Conf.get("SQL_FIND_COMPONENT_BY_SCENE_COMPONENT_AND_SESSION"));
+
+			stmt.setString(1, sceneId);
+			stmt.setString(2, componentId);
+			stmt.setString(3, sessionId);
+			
+			logger.debug("\tQuery: " + stmt);
+			
+			ResultSet result = stmt.executeQuery();
+
+			while (result.next()) {
+				exist = true;
+			}
+			
+			con.close();
+			
+		} catch (ClassNotFoundException e) {
+			logger.error("[ERROR] - ClassNotFoundException " + e.toString());
+		} catch (SQLException e) {
+			logger.error("[ERROR] - SQLException " + e.toString());
+		} catch (IOException e) {
+			logger.error("[ERROR] - IOException " + e.toString());
+		}
+		logger.debug("[FINAL] - ComponentDataServiceDAO - existComponent");
+		
+		return exist;
 	}
 
 }

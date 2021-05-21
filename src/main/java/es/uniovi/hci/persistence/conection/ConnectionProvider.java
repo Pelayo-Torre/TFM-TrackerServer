@@ -24,6 +24,8 @@ public class ConnectionProvider {
 		}
 		return instance;
 	}
+	
+	private ConnectionProvider() {}
 
 	private void init() throws IOException {
 		final InputStream stream =

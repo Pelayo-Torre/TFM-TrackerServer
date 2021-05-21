@@ -44,7 +44,7 @@ public class UserManagerServiceImpl implements UserManagerService{
 				registerUser(userData);
 			} 
 			else {
-				logger.error("[ERROR] - SOMETHING IS WRONG. The user sessions is not flagged as tracked but the session Id exists in the database");
+				logger.debug("SOMETHING IS WRONG. The user sessions is not flagged as tracked but the session Id exists in the database");
 			}
 		}
 		logger.debug("[FINAL] - UserManagerServiceImpl - checkTrackingUser");

@@ -6,4 +6,6 @@ public interface ComponentDataService {
 	
 	public void registry(ComponentData componentData);
 
+	public boolean existComponent(String sceneId, String componentId, String sessionId);
+
 }

@@ -40,15 +40,7 @@ public class ComponentController {
 			transfer = gson.fromJson(parametros, ComponentData.class);
 			
 			if(transfer != null) {
-				
-				transfer.setSessionId(request.getSession().getId());
-				request.getSession().setAttribute("timezone", transfer.getTimezone());
-				
-				if (!(request.getSession().getAttribute("isTracked") == null ? false : true)) {
-					logger.debug("\t Almacenando un nuevo SessionID: " + request.getSession().getId());
-					new UserManagerServiceHelper().checkTrackingUser(fillUserData(request, transfer.getIdExperiment()));
-					request.getSession().setAttribute("isTracked", true);
-				}
+				new UserManagerServiceHelper().checkTrackingUser(fillUserData(request, transfer));
 				new ComponentManagerServiceHelper().registry(transfer);
 				
 			}
@@ -69,16 +61,16 @@ public class ComponentController {
 		return "ok";
 	}
 	
-	private UserData fillUserData(HttpServletRequest request, Long idExperiment) {
+	private UserData fillUserData(HttpServletRequest request, ComponentData transfer) {
 		return new UserData(
-				request.getSession().getId(),
-				idExperiment,
+				transfer.getSessionId(),
+				transfer.getIdExperiment(),
 				(new Date()).getTime(),
 				request.getLocale().toString(),
 				request.getRemoteAddr(),
 				request.getRemoteHost(),
 				request.getRemotePort(),
-				(Integer) request.getSession().getAttribute("timezone")
+				transfer.getTimezone()
 		);
 	}
 
