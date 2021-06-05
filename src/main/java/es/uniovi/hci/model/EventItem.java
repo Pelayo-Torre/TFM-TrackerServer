@@ -3,12 +3,12 @@ package es.uniovi.hci.model;
 public class EventItem {
 	
 	//private Integer id=0;
-	private String sceneId="";
-	private Integer eventType=-1;
-	private String elementId = "";
+	private String sceneId;
+	private Integer eventType;
+	private String elementId;
 	private Long timeStamp;
-	private Integer x=0;
-	private Integer y=0;
+	private Integer x;
+	private Integer y;
 	private String sessionId;
 	private String keyValueEvent;
 	private Integer keyCodeEvent;

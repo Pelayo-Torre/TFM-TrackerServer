@@ -1,0 +1,195 @@
+2021-06-05 14:15:37 ERROR TrackerDataServiceDAO:53 - [ERROR] - SQLException java.sql.BatchUpdateException: (conn=4085) Cannot add or update a child row: a foreign key constraint fails (`miw-tfm-test`.`event`, CONSTRAINT `FKkg53eoi4yoa96ybl04xd0o32r` FOREIGN KEY (`user_session_id`) REFERENCES `userdata` (`session_id`))
+2021-06-05 14:18:12 ERROR TrackerDataServiceDAO:53 - [ERROR] - SQLException java.sql.BatchUpdateException: (conn=4186) Cannot add or update a child row: a foreign key constraint fails (`miw-tfm-test`.`event`, CONSTRAINT `FKkg53eoi4yoa96ybl04xd0o32r` FOREIGN KEY (`user_session_id`) REFERENCES `userdata` (`session_id`))
+2021-06-05 14:19:33 ERROR TrackerDataServiceDAO:53 - [ERROR] - SQLException java.sql.BatchUpdateException: (conn=4191) Cannot add or update a child row: a foreign key constraint fails (`miw-tfm-test`.`event`, CONSTRAINT `FKkg53eoi4yoa96ybl04xd0o32r` FOREIGN KEY (`user_session_id`) REFERENCES `userdata` (`session_id`))
+2021-06-05 14:23:39 ERROR TrackerDataServiceDAO:53 - [ERROR] - SQLException java.sql.BatchUpdateException: (conn=4214) Cannot add or update a child row: a foreign key constraint fails (`miw-tfm-test`.`event`, CONSTRAINT `FKkg53eoi4yoa96ybl04xd0o32r` FOREIGN KEY (`user_session_id`) REFERENCES `userdata` (`session_id`))
+2021-06-05 14:38:09 ERROR UserValidator:47 - 	[ERROR] IdExperimento nulo.
+2021-06-05 14:39:54 ERROR UserValidator:47 - 	[ERROR] IdExperimento nulo.
+2021-06-05 14:40:36 ERROR UserValidator:47 - 	[ERROR] IdExperimento nulo.
+2021-06-05 14:40:43 ERROR UserValidator:47 - 	[ERROR] IdExperimento nulo.
+2021-06-05 14:44:48 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 14:45:47 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 14:53:53 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 14:53:53 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 15:10:59 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 15:10:59 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 15:13:41 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 15:13:41 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 15:15:12 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 15:16:06 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 15:17:25 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 15:17:25 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 15:17:25 ERROR TrackerValidator:42 - 	[ERROR] SceneID nulo.
+2021-06-05 15:17:25 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 15:17:25 ERROR TrackerValidator:54 - 	[ERROR] tipo evento nulo.
+2021-06-05 15:17:25 ERROR TrackerValidator:58 - 	[ERROR] X nulo.
+2021-06-05 15:17:25 ERROR TrackerValidator:62 - 	[ERROR] Y nulo.
+2021-06-05 15:18:03 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 15:18:03 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 15:51:48 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 15:51:48 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 15:51:48 ERROR TrackerValidator:42 - 	[ERROR] SceneID nulo.
+2021-06-05 15:51:48 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 15:51:48 ERROR TrackerValidator:54 - 	[ERROR] tipo evento nulo.
+2021-06-05 15:51:48 ERROR TrackerValidator:58 - 	[ERROR] X nulo.
+2021-06-05 15:51:48 ERROR TrackerValidator:62 - 	[ERROR] Y nulo.
+2021-06-05 16:45:27 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 16:45:27 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 16:45:27 ERROR TrackerValidator:42 - 	[ERROR] SceneID nulo.
+2021-06-05 16:45:27 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 16:45:27 ERROR TrackerValidator:54 - 	[ERROR] tipo evento nulo.
+2021-06-05 16:45:27 ERROR TrackerValidator:58 - 	[ERROR] X nulo.
+2021-06-05 16:45:27 ERROR TrackerValidator:62 - 	[ERROR] Y nulo.
+2021-06-05 16:45:27 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HK
+2021-06-05 16:45:27 ERROR ComponentManagerServiceImpl:25 - 	[ERROR] El componente componente1 en la escena Escena1 para el usuario KJSDF784HD994HK ya se encuentra registrado
+2021-06-05 16:45:27 ERROR ComponentValidator:19 - 	[ERROR] SessionID nulo.
+2021-06-05 16:45:27 ERROR ComponentValidator:23 - 	[ERROR] SceneID nulo.
+2021-06-05 16:45:27 ERROR ComponentValidator:31 - 	[ERROR] TimeStamp nulo.
+2021-06-05 16:45:27 ERROR ComponentValidator:35 - 	[ERROR] X nulo.
+2021-06-05 16:45:27 ERROR ComponentValidator:43 - 	[ERROR] Y nulo.
+2021-06-05 16:45:27 ERROR ComponentValidator:39 - 	[ERROR] xF nulo.
+2021-06-05 16:45:27 ERROR ComponentValidator:47 - 	[ERROR] yF nulo.
+2021-06-05 16:47:07 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 16:47:07 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 16:47:07 ERROR TrackerValidator:42 - 	[ERROR] SceneID nulo.
+2021-06-05 16:47:07 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 16:47:07 ERROR TrackerValidator:54 - 	[ERROR] tipo evento nulo.
+2021-06-05 16:47:07 ERROR TrackerValidator:58 - 	[ERROR] X nulo.
+2021-06-05 16:47:07 ERROR TrackerValidator:62 - 	[ERROR] Y nulo.
+2021-06-05 16:47:07 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HK
+2021-06-05 16:47:07 ERROR ComponentValidator:19 - 	[ERROR] SessionID nulo.
+2021-06-05 16:47:07 ERROR ComponentValidator:23 - 	[ERROR] SceneID nulo.
+2021-06-05 16:47:07 ERROR ComponentValidator:31 - 	[ERROR] TimeStamp nulo.
+2021-06-05 16:47:07 ERROR ComponentValidator:35 - 	[ERROR] X nulo.
+2021-06-05 16:47:07 ERROR ComponentValidator:43 - 	[ERROR] Y nulo.
+2021-06-05 16:47:07 ERROR ComponentValidator:39 - 	[ERROR] xF nulo.
+2021-06-05 16:47:07 ERROR ComponentValidator:47 - 	[ERROR] yF nulo.
+2021-06-05 16:52:10 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 16:52:10 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 16:52:10 ERROR TrackerValidator:42 - 	[ERROR] SceneID nulo.
+2021-06-05 16:52:10 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 16:52:10 ERROR TrackerValidator:54 - 	[ERROR] tipo evento nulo.
+2021-06-05 16:52:10 ERROR TrackerValidator:58 - 	[ERROR] X nulo.
+2021-06-05 16:52:10 ERROR TrackerValidator:62 - 	[ERROR] Y nulo.
+2021-06-05 16:52:10 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HK
+2021-06-05 16:52:10 ERROR ComponentValidator:19 - 	[ERROR] SessionID nulo.
+2021-06-05 16:52:10 ERROR ComponentValidator:23 - 	[ERROR] SceneID nulo.
+2021-06-05 16:52:10 ERROR ComponentValidator:31 - 	[ERROR] TimeStamp nulo.
+2021-06-05 16:52:10 ERROR ComponentValidator:35 - 	[ERROR] X nulo.
+2021-06-05 16:52:10 ERROR ComponentValidator:43 - 	[ERROR] Y nulo.
+2021-06-05 16:52:10 ERROR ComponentValidator:39 - 	[ERROR] xF nulo.
+2021-06-05 16:52:10 ERROR ComponentValidator:47 - 	[ERROR] yF nulo.
+2021-06-05 16:52:10 ERROR ComponentManagerServiceImpl:25 - 	[ERROR] El componente componente1 en la escena Escena1 para el usuario KJSDF784HD994HK ya se encuentra registrado
+2021-06-05 16:52:48 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 16:52:48 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 16:52:48 ERROR TrackerValidator:42 - 	[ERROR] SceneID nulo.
+2021-06-05 16:52:48 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 16:52:48 ERROR TrackerValidator:54 - 	[ERROR] tipo evento nulo.
+2021-06-05 16:52:48 ERROR TrackerValidator:58 - 	[ERROR] X nulo.
+2021-06-05 16:52:48 ERROR TrackerValidator:62 - 	[ERROR] Y nulo.
+2021-06-05 16:52:48 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HK
+2021-06-05 16:52:48 ERROR ComponentValidator:19 - 	[ERROR] SessionID nulo.
+2021-06-05 16:52:48 ERROR ComponentValidator:23 - 	[ERROR] SceneID nulo.
+2021-06-05 16:52:48 ERROR ComponentValidator:31 - 	[ERROR] TimeStamp nulo.
+2021-06-05 16:52:48 ERROR ComponentValidator:35 - 	[ERROR] X nulo.
+2021-06-05 16:52:48 ERROR ComponentValidator:43 - 	[ERROR] Y nulo.
+2021-06-05 16:52:48 ERROR ComponentValidator:39 - 	[ERROR] xF nulo.
+2021-06-05 16:52:48 ERROR ComponentValidator:47 - 	[ERROR] yF nulo.
+2021-06-05 16:52:48 ERROR ComponentManagerServiceImpl:25 - 	[ERROR] El componente componente17.58636681964997E8 en la escena Escena1 para el usuario KJSDF784HD994HK ya se encuentra registrado
+2021-06-05 17:32:16 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HP
+2021-06-05 17:32:16 ERROR DemographicDataValidator:23 - 	[ERROR] SessionId nulo.
+2021-06-05 17:32:16 ERROR DemographicDataValidator:19 - 	[ERROR] Identificador del dato nulo.
+2021-06-05 17:32:16 ERROR DemographicDataValidator:27 - 	[ERROR] Experiment ID nulo.
+2021-06-05 17:32:16 ERROR DemographicDataValidator:31 - 	[ERROR] Valor del dato demográfico nulo.
+2021-06-05 17:32:16 ERROR DemographicDataManagerServiceImpl:38 - 	[ERROR] El dato demográfico obtenido a partir del id y del idExperiment es nulo o no tiene tipo: null
+2021-06-05 17:32:16 ERROR DemographicDataManagerServiceImpl:38 - 	[ERROR] El dato demográfico obtenido a partir del id y del idExperiment es nulo o no tiene tipo: null
+2021-06-05 17:32:23 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 17:32:23 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 17:32:23 ERROR TrackerValidator:42 - 	[ERROR] SceneID nulo.
+2021-06-05 17:32:23 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 17:32:23 ERROR TrackerValidator:54 - 	[ERROR] tipo evento nulo.
+2021-06-05 17:32:23 ERROR TrackerValidator:58 - 	[ERROR] X nulo.
+2021-06-05 17:32:23 ERROR TrackerValidator:62 - 	[ERROR] Y nulo.
+2021-06-05 17:32:23 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HK
+2021-06-05 17:32:23 ERROR ComponentValidator:19 - 	[ERROR] SessionID nulo.
+2021-06-05 17:32:23 ERROR ComponentValidator:23 - 	[ERROR] SceneID nulo.
+2021-06-05 17:32:23 ERROR ComponentValidator:31 - 	[ERROR] TimeStamp nulo.
+2021-06-05 17:32:23 ERROR ComponentValidator:35 - 	[ERROR] X nulo.
+2021-06-05 17:32:23 ERROR ComponentValidator:43 - 	[ERROR] Y nulo.
+2021-06-05 17:32:23 ERROR ComponentValidator:39 - 	[ERROR] xF nulo.
+2021-06-05 17:32:23 ERROR ComponentValidator:47 - 	[ERROR] yF nulo.
+2021-06-05 17:32:23 ERROR ComponentManagerServiceImpl:25 - 	[ERROR] El componente componente16.449596794313061E7 en la escena Escena1 para el usuario KJSDF784HD994HK ya se encuentra registrado
+2021-06-05 17:32:23 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HP
+2021-06-05 17:32:23 ERROR DemographicDataValidator:23 - 	[ERROR] SessionId nulo.
+2021-06-05 17:32:23 ERROR DemographicDataValidator:19 - 	[ERROR] Identificador del dato nulo.
+2021-06-05 17:32:23 ERROR DemographicDataValidator:27 - 	[ERROR] Experiment ID nulo.
+2021-06-05 17:32:23 ERROR DemographicDataValidator:31 - 	[ERROR] Valor del dato demográfico nulo.
+2021-06-05 17:32:23 ERROR DemographicDataManagerServiceImpl:38 - 	[ERROR] El dato demográfico obtenido a partir del id y del idExperiment es nulo o no tiene tipo: null
+2021-06-05 17:32:23 ERROR DemographicDataManagerServiceImpl:38 - 	[ERROR] El dato demográfico obtenido a partir del id y del idExperiment es nulo o no tiene tipo: null
+2021-06-05 17:54:01 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 17:54:01 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 17:54:01 ERROR TrackerValidator:42 - 	[ERROR] SceneID nulo.
+2021-06-05 17:54:01 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 17:54:01 ERROR TrackerValidator:54 - 	[ERROR] tipo evento nulo.
+2021-06-05 17:54:01 ERROR TrackerValidator:58 - 	[ERROR] X nulo.
+2021-06-05 17:54:01 ERROR TrackerValidator:62 - 	[ERROR] Y nulo.
+2021-06-05 17:54:01 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HK
+2021-06-05 17:54:01 ERROR ComponentValidator:19 - 	[ERROR] SessionID nulo.
+2021-06-05 17:54:01 ERROR ComponentValidator:23 - 	[ERROR] SceneID nulo.
+2021-06-05 17:54:01 ERROR ComponentValidator:31 - 	[ERROR] TimeStamp nulo.
+2021-06-05 17:54:01 ERROR ComponentValidator:35 - 	[ERROR] X nulo.
+2021-06-05 17:54:01 ERROR ComponentValidator:43 - 	[ERROR] Y nulo.
+2021-06-05 17:54:01 ERROR ComponentValidator:39 - 	[ERROR] xF nulo.
+2021-06-05 17:54:01 ERROR ComponentValidator:47 - 	[ERROR] yF nulo.
+2021-06-05 17:54:01 ERROR ComponentManagerServiceImpl:25 - 	[ERROR] El componente componente11.6337873837372965E8 en la escena Escena1 para el usuario KJSDF784HD994HK ya se encuentra registrado
+2021-06-05 17:54:01 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HP
+2021-06-05 17:54:01 ERROR DemographicDataValidator:23 - 	[ERROR] SessionId nulo.
+2021-06-05 17:54:01 ERROR DemographicDataValidator:19 - 	[ERROR] Identificador del dato nulo.
+2021-06-05 17:54:01 ERROR DemographicDataValidator:27 - 	[ERROR] Experiment ID nulo.
+2021-06-05 17:54:01 ERROR DemographicDataValidator:31 - 	[ERROR] Valor del dato demográfico nulo.
+2021-06-05 17:54:01 ERROR DemographicDataManagerServiceImpl:38 - 	[ERROR] El dato demográfico obtenido a partir del id y del idExperiment es nulo o no tiene tipo: null
+2021-06-05 17:54:01 ERROR DemographicDataManagerServiceImpl:38 - 	[ERROR] El dato demográfico obtenido a partir del id y del idExperiment es nulo o no tiene tipo: null
+2021-06-05 17:54:01 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HL
+2021-06-05 17:54:55 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HL
+2021-06-05 17:57:10 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HL
+2021-06-05 17:59:49 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HL
+2021-06-05 18:00:40 ERROR UserDataServiceDAO:77 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HL
+2021-06-05 18:14:00 ERROR UserValidator:19 - 	[ERROR] SessionId nulo.
+2021-06-05 18:14:00 ERROR UserValidator:23 - 	[ERROR] TimeStamp nulo.
+2021-06-05 18:14:00 ERROR UserValidator:27 - 	[ERROR] Locale nulo.
+2021-06-05 18:14:00 ERROR UserValidator:31 - 	[ERROR] RemoteAddress nulo.
+2021-06-05 18:14:00 ERROR UserValidator:35 - 	[ERROR] RemoteHost nulo.
+2021-06-05 18:14:00 ERROR UserValidator:39 - 	[ERROR] RemotePort nulo.
+2021-06-05 18:14:00 ERROR UserValidator:43 - 	[ERROR] Timezone nulo.
+2021-06-05 18:14:00 ERROR UserValidator:47 - 	[ERROR] IdExperimento nulo.
+2021-06-05 18:14:00 ERROR UserDataServiceDAO:76 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HL1.987754665468394E8
+2021-06-05 18:16:13 ERROR UserDataServiceDAO:76 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HR
+2021-06-05 18:16:13 ERROR TrackerValidator:20 - 	[ERROR] SessionId nulo.
+2021-06-05 18:16:13 ERROR TrackerValidator:42 - 	[ERROR] SceneID nulo.
+2021-06-05 18:16:13 ERROR TrackerValidator:50 - 	[ERROR] ElementId nulo.
+2021-06-05 18:16:13 ERROR TrackerValidator:54 - 	[ERROR] tipo evento nulo.
+2021-06-05 18:16:13 ERROR TrackerValidator:58 - 	[ERROR] X nulo.
+2021-06-05 18:16:13 ERROR TrackerValidator:62 - 	[ERROR] Y nulo.
+2021-06-05 18:16:13 ERROR UserDataServiceDAO:76 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HK
+2021-06-05 18:16:13 ERROR ComponentValidator:19 - 	[ERROR] SessionID nulo.
+2021-06-05 18:16:13 ERROR ComponentValidator:23 - 	[ERROR] SceneID nulo.
+2021-06-05 18:16:13 ERROR ComponentValidator:31 - 	[ERROR] TimeStamp nulo.
+2021-06-05 18:16:13 ERROR ComponentValidator:35 - 	[ERROR] X nulo.
+2021-06-05 18:16:13 ERROR ComponentValidator:43 - 	[ERROR] Y nulo.
+2021-06-05 18:16:13 ERROR ComponentValidator:39 - 	[ERROR] xF nulo.
+2021-06-05 18:16:13 ERROR ComponentValidator:47 - 	[ERROR] yF nulo.
+2021-06-05 18:16:13 ERROR ComponentManagerServiceImpl:25 - 	[ERROR] El componente componente17.996312258635144E8 en la escena Escena1 para el usuario KJSDF784HD994HK ya se encuentra registrado
+2021-06-05 18:16:13 ERROR UserDataServiceDAO:76 - [ERROR] - SQLIntegrityConstraintViolationException: Duplicate entry '' for key KJSDF784HD994HP
+2021-06-05 18:16:13 ERROR DemographicDataValidator:23 - 	[ERROR] SessionId nulo.
+2021-06-05 18:16:13 ERROR DemographicDataValidator:19 - 	[ERROR] Identificador del dato nulo.
+2021-06-05 18:16:13 ERROR DemographicDataValidator:27 - 	[ERROR] Experiment ID nulo.
+2021-06-05 18:16:13 ERROR DemographicDataValidator:31 - 	[ERROR] Valor del dato demográfico nulo.
+2021-06-05 18:16:13 ERROR DemographicDataManagerServiceImpl:38 - 	[ERROR] El dato demográfico obtenido a partir del id y del idExperiment es nulo o no tiene tipo: null
+2021-06-05 18:16:13 ERROR DemographicDataManagerServiceImpl:38 - 	[ERROR] El dato demográfico obtenido a partir del id y del idExperiment es nulo o no tiene tipo: null
+2021-06-05 18:16:13 ERROR UserValidator:19 - 	[ERROR] SessionId nulo.
+2021-06-05 18:16:13 ERROR UserValidator:23 - 	[ERROR] TimeStamp nulo.
+2021-06-05 18:16:13 ERROR UserValidator:27 - 	[ERROR] Locale nulo.
+2021-06-05 18:16:13 ERROR UserValidator:31 - 	[ERROR] RemoteAddress nulo.
+2021-06-05 18:16:13 ERROR UserValidator:35 - 	[ERROR] RemoteHost nulo.
+2021-06-05 18:16:13 ERROR UserValidator:39 - 	[ERROR] RemotePort nulo.
+2021-06-05 18:16:13 ERROR UserValidator:43 - 	[ERROR] Timezone nulo.
+2021-06-05 18:16:13 ERROR UserValidator:47 - 	[ERROR] IdExperimento nulo.

@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
 
 import org.apache.log4j.Logger;
 
@@ -58,7 +57,7 @@ public class UserDataServiceDAO implements UserDataService{
 			PreparedStatement stmt = con.prepareStatement(Conf.get("SQL_INSERT_USER"));
 
 			stmt.setString(1, userData.getSessionId());
-			stmt.setLong(2, (new Date()).getTime());
+			stmt.setLong(2, userData.getTimeStamp());
 			stmt.setString(3, userData.getLocale());
 			stmt.setString(4, userData.getRemoteAddress());
 			stmt.setString(5, userData.getRemoteHost());

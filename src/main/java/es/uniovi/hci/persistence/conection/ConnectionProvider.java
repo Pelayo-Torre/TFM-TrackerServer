@@ -15,6 +15,7 @@ public class ConnectionProvider {
 	private static ConnectionProvider instance = null;
 	private String user, password, driver, connectionString;
 	final static Logger logger = Logger.getLogger(ConnectionProvider.class);
+	private String file = "db.properties";
 
 
 	public static ConnectionProvider getInstance() throws IOException {
@@ -29,7 +30,7 @@ public class ConnectionProvider {
 
 	private void init() throws IOException {
 		final InputStream stream =
-		           this.getClass().getClassLoader().getResourceAsStream("db.properties");
+		           this.getClass().getClassLoader().getResourceAsStream(this.file);
 		Properties p = new Properties();
 		if (stream != null) {
 			p.load(stream);
@@ -50,5 +51,15 @@ public class ConnectionProvider {
 		Class.forName(driver);
 		Connection con = DriverManager.getConnection(connectionString, user, password);
 		return con;
+	}
+	
+	/**
+	 * Recibe un fichero donde se encuentra la configuración de base de datos
+	 * @param file fichero
+	 * @throws IOException 
+	 */
+	public void changeConnection(String file) throws IOException {
+		this.file = file;
+		init();
 	}
 }

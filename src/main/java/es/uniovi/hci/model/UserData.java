@@ -56,7 +56,7 @@ public class UserData {
 		this.timezone = timezone;
 	}
 
-	public UserData(String idSession, Long idExperiment, long time, String locale, String remoteAddr, String remoteHost2, int remotePort2,
+	public UserData(String idSession, Long idExperiment, Long time, String locale, String remoteAddr, String remoteHost2, Integer remotePort2,
 			Integer timezone) {
 		this.sessionId = idSession;
 		this.idExperiment = idExperiment;
