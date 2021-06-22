@@ -13,7 +13,7 @@
     </head>
 
     <body onload="getTracking(session_id);">
-        <h1>¿Quién es el puto amo? :D. Veis las trazadas de vuestra sesión...</h1>
+        <h1></h1>
         
         <canvas id="myCanvas" width="1800" height="1000"></canvas>
         <!--

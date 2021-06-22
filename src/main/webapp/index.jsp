@@ -9,9 +9,6 @@
 <body>
 	
 	<h2>Master Degree in Web Engineering - RESTful Web Service</h2>
-	<p>
-		<a href="restws/hello">Hello RS</a>
-	</p>
 	
 	<form action="restws/track" method="POST">
 		<input type="text" name="sessionId"/>
@@ -19,12 +16,6 @@
 	</form>
 	<p>
 		<a href="Replicas/Intro.html">Prototipo</a>
-	</p>
-	<p>
-		<a href="restws/track">Ver trazada</a>
-	</p>
-	<p>
-		<a href="simonFarm/index.jsp">Simon Farm!</a>
 	</p>
 	
 </body>

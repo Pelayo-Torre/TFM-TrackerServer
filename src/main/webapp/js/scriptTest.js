@@ -40,8 +40,8 @@
 		var elements =[]; 
 		var emittingData = false;
 		
-	var idExperiment = 2;
-	var urlBase='http://156.35.95.104:8080'
+	var idExperiment = 1;
+	var urlBase='http://localhost:8080'
 		
 		var url = urlBase + '/TrackerServer/restws/track';
 		var urlRegisterComponent = urlBase + '/TrackerServer/restws/registerComponent';
@@ -620,4 +620,18 @@
 		}
 	
 
-function registerGenero(value) {postNumberDD(6, value);}function registerProfesion(value) {postStringDD(7, value);}function registerLateralidad(value) {postNumberDD(8, value);}function registerEdad(value) {postDateDD(9, value);}
+		function registerLateralidad(value) {
+			postNumberDD(1, value);
+		}
+		
+		function registerGenero(value) {
+			postNumberDD(2, value);
+		}
+		
+		function registerEdad(value) {
+			postDateDD(3, value);
+		}
+		
+		function registerProfesion(value) {
+			postStringDD(4, value);
+		}

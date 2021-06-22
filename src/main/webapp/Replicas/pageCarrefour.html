@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/form.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="./../js/scriptTest.js"></script>        
 
@@ -19,9 +20,8 @@
 			function loadData(){
 				registerEdad(new Date());
 				registerGenero(1);
-				registerProfesion("F�sico");
+				registerProfesion("Enfermero");
 				registerLateralidad(1);
-				
 				
 				registerComponent(101, "inputTeclado", 0, 0, 0, 0, 1, null);
 				registerComponent(101, "inputTeclado2", 0, 0, 0, 0, 1, null);
@@ -68,61 +68,65 @@
 		
 	</head>
 	<body>
-		<p>EVENTO TECLADO</p><input type="text" id="inputTeclado"/>
-		<p>EVENTO TECLADO 2</p> <input type="text" id="inputTeclado2"/>
-		<br>
-		<br>
-		<p>EVENTOS COMBOBOX</p>
-		<label for="cars">Choose a car:</label>
-		  <select id="cars" name="cars">
-		    <option value="volvo" id="volvo">Volvo</option>
-		    <option value="saab" id="saab">Saab</option>
-		    <option value="fiat" id="fiat">Fiat</option>
-		    <option value="audi" id="audi">Audi</option>
-		  </select>
-		<br>
-		<br>	
-		<br>
-		<p>EVENTOS COMBOBOX Teclado</p>
-		<label for="computers">Choose a computer:</label>
-		  <select id="computers" name="computers">
-		    <option value="hp" id="hp">HP</option>
-		    <option value="pavilion" id="pavilion">Pavilion</option>
-		    <option value="msi" id="msi">MSI</option>
-		    <option value="asus" id="asus">Asus</option>
-		    <option value="acer" id="acer">Acer</option>
-		    <option value="dell" id="dell">Dell</option>
-		    <option value="wiko" id="wiko">Wiko</option>
-		    <option value="sony" id="sony">Sony</option>
-		  </select>
-		<br>
-		<br>
-		<p>Please select your gender:</p>
-		  <input type="radio" id="male" name="gender" value="male">
-		  <label for="male">Male</label><br>
-		  <input type="radio" id="female" name="gender" value="female">
-		  <label for="female">Female</label><br>
-		  <input type="radio" id="other" name="gender" value="other">
-		  <label for="other">Other</label>
-		<br>	
-		<br>
-		<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-		  <label for="vehicle1"> I have a bike</label><br>
-		  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-		  <label for="vehicle2"> I have a car</label><br>
-		  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-		  <label for="vehicle3"> I have a boat</label>
-  		<br><br>
-		<div id="cookieConsent">
-			<div id="closeCookieConsent">x</div>
-			<span id="cookieText">
-			Centros Comerciales Carrefour, S.A. utiliza cookies propias y de terceros para proporcionarte una mejor experiencia de compra, 
-			elaborar información estadística y ofrecerte publicidad de interés por nosotros y por terceros. Si continúas navegando, 
-			consideramos que aceptas su uso. 
-			Puedes cambiar la configuración, y/o rechazar, así como obtener más información sobre las cookies en
-			<a href="#" target="_blank">saber más</a>.
-			</span>	
-			<a class="cookieConsentOK" onclick='finishTracking();window.location.href = "transition1-2.html";'>Aceptar y continuar</a>
+		<div id="form">
+			<div id="title">
+				<h2>Rellene el siguiente formulario</h2>
+			</div>
+			<div id="name">
+				<label>Nombre: </label><input type="text" id="inputTeclado"/>
+			</div>
+			<div id="surname">
+				<label>Apellidos: </label><input type="text" id="inputTeclado2"/>
+			</div>
+			<br>
+			<div>
+				<div id="carsDiv">
+				  <label for="cars">Seleccione una marca de coche:</label>
+				  <select id="cars" name="cars">
+				    <option value="volvo" id="volvo">Volvo</option>
+				    <option value="saab" id="saab">Saab</option>
+				    <option value="fiat" id="fiat">Fiat</option>
+				    <option value="audi" id="audi">Audi</option>
+				  </select>
+				</div>
+				<div id="computersDiv">
+					<label for="computers">Seleccione un ordenador:</label>
+					  <select id="computers" name="computers">
+					    <option value="hp" id="hp">HP</option>
+					    <option value="pavilion" id="pavilion">Pavilion</option>
+					    <option value="msi" id="msi">MSI</option>
+					    <option value="asus" id="asus">Asus</option>
+					    <option value="acer" id="acer">Acer</option>
+					    <option value="dell" id="dell">Dell</option>
+					    <option value="wiko" id="wiko">Wiko</option>
+					    <option value="sony" id="sony">Sony</option>
+					  </select>
+				</div>
+			</div>
+			<div id="selectGender">
+			  <p>Seleccione su g�nero:</p>
+			  <input type="radio" id="male" name="gender" value="male">
+			  <label for="male">Male</label><br>
+			  <input type="radio" id="female" name="gender" value="female">
+			  <label for="female">Female</label><br>
+			  <input type="radio" id="other" name="gender" value="other">
+			  <label for="other">Other</label>
+			</div>
+			<div id="selectCheck">
+				<p>Seleccione alguna de las siguientes opciones:</p>
+				<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+				  <label for="vehicle1"> Tengo una bicicleta</label><br>
+				  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+				  <label for="vehicle2"> Tengo un coche</label><br>
+				  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+				  <label for="vehicle3"> Tengo un barco</label>
+			</div>
+			<br>
+			<div id="button">
+				<button onclick='finishTracking();window.location.href = "transition1-2.html";'>Aceptar</button>
+			</div>	
+			
 		</div>
+		
 	</body>
 </html>
